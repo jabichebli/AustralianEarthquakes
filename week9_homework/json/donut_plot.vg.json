@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+      "values": [
+          {
+              "State": "Victoria",
+              "value": 778
+          },
+          {
+              "State": "New South Wales",
+              "value": 1602
+          },
+          {
+              "State": "South Australia",
+              "value": 2017
+          },
+          {
+              "State": "Queensland",
+              "value": 536
+          },
+          {
+              "State": "Northern Territory",
+              "value": 1218
+          },
+          {
+              "State": "Western Australia",
+              "value": 7900
+          },
+          {
+              "State": "Tasmania",
+              "value": 155
+          },
+          {
+              "State": "ACT",
+              "value": 15
+          }
+      ]
+  },
+  "mark": {
+      "type": "arc",
+      "innerRadius": 50
+  },
+  "encoding": {
+      "theta": {
+          "field": "value",
+          "type": "quantitative"
+      },
+      "color": {
+          "field": "State",
+          "type": "nominal"
+      }
+  }
+}

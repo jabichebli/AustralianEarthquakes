@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,"height": 400,
+    "title"  :   "Average Earthquakes per State in Australia from 2008-2024"  ,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_bubble_plot.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "num_earthquakes_per_area",
+        "type": "quantitative",
+        "title": "Number of Earthquakes per 100,000km^2"
+      },
+      "color": {
+        "field": "State",
+        "type"  : "nominal",
+        "title": "State" 
+      },
+      "size" : { 
+        "field" :  "avg_mag_per_year_state" ,
+        "type" :  "quantitative",
+        "title": "Average Magnitude"
+      }
+    }
+  }
+  

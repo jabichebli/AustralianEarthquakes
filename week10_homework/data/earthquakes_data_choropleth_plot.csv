@@ -1,4 +1,4 @@
-﻿depth,description,epicentral_time,event_creation_time,year,state,num_earthquakes,avg_mag,state_area,state_area_per_100000,num_earthquakes_per_area,largest_mag_earthquake
+﻿depth,description,epicentral_time,event_creation_time,year,STATE_NAME,num_earthquakes,avg_mag,state_area,state_area_per_100000,num_earthquakes_per_area,largest_mag_earthquake
 5,Indian Ocean. Nearest station GIRL.,,2008-04-02T09:57:36,2008,Victoria,182,2.470549451,227444,2.27444,80.01969716,5
 0,"Korumburra, VIC. Nearest station TOO.",,2008-04-02T15:42:47,2009,Victoria,51,2.709215686,227444,2.27444,22.42310195,4.6
 17,"W of Port Noarlunga, SA.",,2008-04-03T07:21:10,2010,Victoria,23,2.572608696,227444,2.27444,10.11237931,3.32

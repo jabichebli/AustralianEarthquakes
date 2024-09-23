@@ -211,3 +211,16 @@
         transform: scale(1);
     }
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px; /* Add padding around the body */
+    background-color: white; /* Light background color */
+}
+#show_map {
+    width: 100%;
+    max-width: 600px; /* Limit the width of the map */
+    height: 400px; /* Set a height for the graph */
+    margin-top: 20px; /* Space above the graph */
+    background-color: white; /* White background for the graph area */
+}

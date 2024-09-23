@@ -82,7 +82,7 @@
           "tooltip": [
             { "field": "state", "type": "nominal", "title": "State" },
             { "field": "year", "type": "ordinal", "title": "Year" },
-            { "field": "largest_mag_earthquake", "type": "quantitative", "title": "Largest Magnitude Earthquake" },
+            { "field": "largest_mag_earthquake", "type": "quantitative", "title": "Largest Magnitude Earthquake", "format": ".2f"},
             { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number Earthquakes per 100,000 km²", "format": ".2f" },
             { "field": "avg_mag", "type": "quantitative", "title": "Average Magnitude", "format": ".2f" }
           ]

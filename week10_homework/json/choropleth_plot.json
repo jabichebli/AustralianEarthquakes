@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "title": {
+      "text": "Earthquakes in Each State of Australia (2000 to 2024)",
+      "anchor": "middle",
+      "fontSize": 20,
+      "fontWeight": "bold"
+    },
+    "params": [
+      {
+        "name": "year_selection",
+        "bind": {
+          "input": "select",
+          "options": [null, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+          "labels": ["All Years", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+          "name": "Year Selection"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/json/states_australia.topojson",
+          "format": {
+            "type": "topojson",
+            "feature": "states" 
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "stroke": "white"
+        },
+        "encoding": {
+          "color": {
+            "field": "num_earthquakes_per_area", 
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 100],  
+              "range": ["lightblue", "darkblue"]
+            },
+            "legend": {
+              "title": "Earthquakes per 100,000 km²"
+            }
+          },
+          "tooltip": [
+            {
+              "field": "properties.STATE_NAME",
+              "title": "State"
+            },
+            {
+              "field": "num_earthquakes_per_area",
+              "title": "Earthquakes per 100,000 km²"
+            }
+          ]
+        },
+        "transform": [
+          {
+            "lookup": "properties.STATE_NAME",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_plot.csv",
+                "format": {
+                  "type": "csv"
+                }
+              },
+              "key": "STATE_NAME", 
+              "fields": ["num_earthquakes_per_area", "year"] 
+            }
+          },
+          {
+            "filter": "year_selection == null || datum.year == year_selection" 
+          }
+        ]
+      }
+    ],
+    "projection": {
+      "type": "mercator"
+    }
+  }
+  

@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A bar chart with highlighting on hover and selecting on click. (Inspired by Tableau's interaction style.)",
+    "title": "Number of Earthquakes in Australia from 2008 to Q3 2024",
     "data": {
         "values": [
             {

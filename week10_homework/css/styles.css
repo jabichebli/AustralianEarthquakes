@@ -42,3 +42,38 @@ h1 {
 .small-font {
     font-size: 14px;
 }
+
+#title {
+    text-align: center;
+    background-color: #0a91ff;
+    font-size: 20px;
+    font-family: "Righteous", sans-serif;
+    /* background-image: url("img/earthquake_crack.jpg"); */
+    background-size: cover; /* Makes the image cover the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 20px; /* Adds some padding for better spacing */
+    color: black; /* Optional: changes text color for better contrast */
+}
+
+
+#figure-caption {
+    font-size: 13px;
+    text-align: center;
+}
+
+.pure-img{
+    width: 100%; 
+    height: auto; 
+    max-width: 800px;
+    margin-top: 35px;
+}
+
+.body-text{
+    text-align: justify;
+}
+
+#footer{
+    border-top: 2px solid black; /* Thickness, style, and color of the border */
+    padding: 10px; /* Optional: adds some space inside the div */
+}

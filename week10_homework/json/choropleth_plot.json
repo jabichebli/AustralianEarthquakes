@@ -3,11 +3,23 @@
     "width": 800,
     "height": 400,
     "title": {
-      "text": "Earthquakes in Each State of Australia 2024",
+      "text": "Number of Earthquakes in Each State of Australia (2008 to 2024)",
       "anchor": "middle",
       "fontSize": 20,
       "fontWeight": "bold"
     },
+    "params": [
+      {
+        "name": "year_selection",
+        "value": "All Years",
+        "bind": {
+          "input": "select",
+          "options": ["All Years", 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008],
+          "labels": ["All Years", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008"],
+          "name": "Year Selection"
+        }
+      }
+    ],
     "layer": [
       {
         "data": {
@@ -23,25 +35,33 @@
         },
         "transform": [
           {
-            "lookup": "properties.STATE_NAME", 
+            "lookup": "properties.STATE_NAME",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_plot.csv",
+                "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_data.csv",
                 "format": {
                   "type": "csv"
                 }
               },
-              "key": "STATE_NAME",  
-              "fields": ["num_earthquakes_per_area"]  
+              "key": "state",
+              "fields": [
+                "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", 
+                "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", 
+                "2008", "All Years"
+              ]
             }
+          },
+          {
+            "calculate": "year_selection == null ? null : datum[year_selection]",
+            "as": "earthquakes_for_year"
           }
         ],
         "encoding": {
           "color": {
-            "field": "num_earthquakes_per_area",  
+            "field": "earthquakes_for_year",
             "type": "quantitative",
             "scale": {
-              "domain": [0, 20],  
+              "domain": [0, 20], 
               "range": ["lightblue", "darkblue"]
             },
             "legend": {
@@ -54,7 +74,7 @@
               "title": "State"
             },
             {
-              "field": "num_earthquakes_per_area",
+              "field": "earthquakes_for_year", 
               "title": "Number of Earthquakes per 100,000 km²",
               "format": ".2f"
             }

@@ -71,9 +71,19 @@ h1 {
 
 .body-text{
     text-align: justify;
+    line-height: 25px;
 }
 
 #footer{
     border-top: 2px solid black; /* Thickness, style, and color of the border */
     padding: 10px; /* Optional: adds some space inside the div */
+}
+
+.pure-u-1-2{
+    text-align: center;  /* Make the figures in the center*/
+}
+
+li{
+    text-align: justify;
+    line-height: 25px;
 }

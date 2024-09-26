@@ -1,189 +1,197 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
-    "height": 400,
-    "title": "Trends in Australian Earthquakes: A State-by-State Analysis (2008-2024)",
-    "data": {
-      "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_bubble_plot.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "title": {
+    "text": "Trends in Australian Earthquakes: A State-by-State Analysis (2008-2024)",
+    "fontSize": 16,
+    "anchor": "middle",
+    "font": "Open Sans, sans-serif"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_bubble_plot.csv"
+  },
+  "transform": [
+    {
+      "filter": "state_selection == null || datum.state == state_selection"
     },
-    "transform": [
-      {
-        "filter": "state_selection == null || datum.state == state_selection"
-      },
-      {
-        "filter": "year_selection == null || datum.year == year_selection"
-      },
-      {
-        "filter": "datum.state != null"
-      },
-      {
-        "filter": "datum.avg_mag >= avg_mag_selection"
+    {
+      "filter": "year_selection == null || datum.year == year_selection"
+    },
+    {
+      "filter": "datum.state != null"
+    },
+    {
+      "filter": "datum.avg_mag >= avg_mag_selection"
+    }
+  ],
+  "params": [
+    {
+      "name": "state_selection",
+      "bind": {
+        "input": "select",
+        "options": [null, "VIC", "SA", "NT", "TAS", "NSW", "QLD", "WA"],
+        "labels": ["All States", "Victoria", "South Australia", "Northern Territory", "Tasmania", "New South Wales", "Queensland", "Western Australia"],
+        "name": "State Selection"
       }
-    ],
-    "params": [
-      {
-        "name": "state_selection",
-        "bind": {
-          "input": "select",
-          "options": [null, "VIC", "SA", "NT", "TAS", "NSW", "QLD", "WA"],
-          "labels": ["All States", "Victoria", "South Australia", "Northern Territory", "Tasmania", "New South Wales", "Queensland", "Western Australia"],
-          "name": "State Selection"
-        }
-      },
-      {
-        "name": "year_selection",
-        "bind": {
-          "input": "select",
-          "options": [null, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-          "labels": ["All Years", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
-          "name": "Year Selection"
-        }
-      },
-      {
-        "name": "avg_mag_selection",
-        "bind": {
-          "input": "range",
-          "min": 1.3,
-          "max": 3.38,
-          "step": 0.05,
-          "name": "Average Magnitude Selection"
-        },
-        "value": 1.8 
+    },
+    {
+      "name": "year_selection",
+      "bind": {
+        "input": "select",
+        "options": [null, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+        "labels": ["All Years", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
+        "name": "Year Selection"
       }
-    ],
-    "layer": [
-      {
-        "mark": "circle",
-        "encoding": {
-          "x": {
-            "field": "largest_mag_earthquake",
-            "type": "quantitative",
-            "title": "Largest Magnitude Earthquake"
-          },
-          "y": {
-            "field": "num_earthquakes_per_area",
-            "type": "quantitative",
-            "title": "Number of Earthquakes per 100,000km²"
-          },
-          "color": {
-            "field": "state",
-            "type": "nominal",
-            "title": "State"
-          },
-          "size": {
-            "field": "avg_mag",
-            "type": "quantitative",
-            "title": "Average Magnitude Earthquake",
-            "scale": {
-              "domain": [1.8, 3],
-              "range": [0, 350]
-            }
-          },
-          "tooltip": [
-            { "field": "state", "type": "nominal", "title": "State" },
-            { "field": "year", "type": "ordinal", "title": "Year" },
-            { "field": "largest_mag_earthquake", "type": "quantitative", "title": "Largest Magnitude Earthquake", "format": ".2f"},
-            { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number Earthquakes per 100,000 km²", "format": ".2f" },
-            { "field": "avg_mag", "type": "quantitative", "title": "Average Magnitude", "format": ".2f" }
-          ]
-        }
+    },
+    {
+      "name": "avg_mag_selection",
+      "bind": {
+        "input": "range",
+        "min": 1.3,
+        "max": 3.38,
+        "step": 0.05,
+        "name": "Average Magnitude Selection"
       },
-      {
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "dx": -330,
-          "dy": 10,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
+      "value": 1.8 
+    }
+  ],
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "largest_mag_earthquake",
+          "type": "quantitative",
+          "title": "Largest Magnitude Earthquake"
         },
-        "encoding": {
-          "text": { "value": "Tasmania had the second highest average magnitude in 2008." },
-          "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
-          "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
-          "color": { "value": "black" },
-          "opacity": {
-            "condition": {
-              "test": "datum.state == 'TAS' && datum.year == 2008",
-              "value": 1
-            },
-            "value": 0
+        "y": {
+          "field": "num_earthquakes_per_area",
+          "type": "quantitative",
+          "title": "Number of Earthquakes per 100,000km²"
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "title": "State"
+        },
+        "size": {
+          "field": "avg_mag",
+          "type": "quantitative",
+          "title": "Average Magnitude Earthquake",
+          "scale": {
+            "domain": [1.8, 3],
+            "range": [0, 350]
           }
-        }
+        },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "year", "type": "ordinal", "title": "Year" },
+          { "field": "largest_mag_earthquake", "type": "quantitative", "title": "Largest Magnitude Earthquake", "format": ".2f"},
+          { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number Earthquakes per 100,000 km²", "format": ".2f" },
+          { "field": "avg_mag", "type": "quantitative", "title": "Average Magnitude", "format": ".2f" }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -330,
+        "dy": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif"
       },
-      {
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "dx": -370,
-          "dy": 15,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
-        },
-        "encoding": {
-          "text": { "value": "WA had the second highest earthquake rate per 100,000 km² in 2008." },
-          "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
-          "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
-          "color": { "value": "black" },
-          "opacity": {
-            "condition": {
-              "test": "datum.state == 'WA' && datum.year == 2008",
-              "value": 1
-            },
-            "value": 0
-          }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "dx": -360,
-          "dy": -10,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
-        },
-        "encoding": {
-          "text": { "value": "Victoria had the highest earthquake rate per 100,000 km² in 2008." },
-          "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
-          "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
-          "color": { "value": "black" },
-          "opacity": {
-            "condition": {
-              "test": "datum.state == 'VIC' && datum.year == 2008",
-              "value": 1
-            },
-            "value": 0
-          }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "left",
-          "baseline": "middle",
-          "dx": -310,
-          "dy": 30,
-          "fontSize": 11.5,
-          "fontStyle": "italic"
-        },
-        "encoding": {
-          "text": { "value": "In 2008, most states recorded their highest earthquake counts." },
-          "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
-          "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
-          "color": { "value": "black" },
-          "opacity": {
-            "condition": {
-              "test": "datum.state == 'NSW' && datum.year == 2008",
-              "value": 1
-            },
-            "value": 0
-          }
+      "encoding": {
+        "text": { "value": "Tasmania had the second highest average magnitude in 2008." },
+        "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
+        "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == 'TAS' && datum.year == 2008",
+            "value": 1
+          },
+          "value": 0
         }
       }
-    ]
-  }
-  
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -370,
+        "dy": 15,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif"
+      },
+      "encoding": {
+        "text": { "value": "WA had the second highest earthquake rate per 100,000 km² in 2008." },
+        "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
+        "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == 'WA' && datum.year == 2008",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -360,
+        "dy": -10,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif"
+      },
+      "encoding": {
+        "text": { "value": "Victoria had the highest earthquake rate per 100,000 km² in 2008." },
+        "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
+        "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == 'VIC' && datum.year == 2008",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -310,
+        "dy": 30,
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif"
+      },
+      "encoding": {
+        "text": { "value": "In 2008, most states recorded their highest earthquake counts." },
+        "x": { "field": "largest_mag_earthquake", "type": "quantitative" },
+        "y": { "field": "num_earthquakes_per_area", "type": "quantitative" },
+        "color": { "value": "black" },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == 'NSW' && datum.year == 2008",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}

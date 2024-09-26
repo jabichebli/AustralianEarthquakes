@@ -5,8 +5,8 @@
   "title": {
     "text": "Earthquakes in Australia between 2008 to 2024",
     "anchor": "middle",
-    "fontSize": 20,
-    "fontWeight": "bold"
+    "fontSize": 16,
+    "font": "Open Sans, sans-serif"
   },
   "projection": {"type": "mercator", "center": [135, -25], "scale": 500},
   "params": [
@@ -93,5 +93,10 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"},
+    "legend": {"labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"}
+  }
 }

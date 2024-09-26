@@ -1,116 +1,118 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_data.csv",
-      "format": {
-        "type": "csv"
-      }
-    },
-    "title": {
-      "text": "Earthquake Frequency Comparison",
-      "fontSize": 20,
-      "anchor": "middle",
-      "align": "center"
-    },
-    "spacing": 0,
-    "hconcat": [
-      {
-        "title": "Western Australia",
-        "transform": [
-          {
-            "filter": {
-              "field": "STATE_NAME",
-              "equal": "Western Australia"
-            }
-          }
-        ],
-        "mark": "bar",
-        "encoding": {
-          "y": {
-            "field": "year",
-            "axis": null,
-            "sort": "descending"
-          },
-          "x": {
-            "field": "num_earthquakes_per_area",
-            "type": "quantitative",
-            "title": "Number of Earthquakes per 100,000 km²",
-            "axis": {"format": "d"},
-            "sort": "descending",
-            "scale": {
-              "domain": [0, 90]
-            }
-          },
-          "color": {
-            "value": "#ff7f0e"
-          },
-          "tooltip": [
-            {"field": "STATE_NAME", "type": "nominal", "title": "State"},
-            {"field": "year", "type": "ordinal", "title": "Year"},
-            {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
-          ]
-        }
-      },
-      {
-        "width": 20,
-        "view": {"stroke": null},
-        "mark": {
-          "type": "text",
-          "align": "center"
-        },
-        "encoding": {
-          "y": {
-            "field": "year",
-            "type": "ordinal",
-            "axis": null,
-            "sort": "descending"
-          },
-          "text": {
-            "field": "year",
-            "type": "ordinal"
-          }
-        }
-      },
-      {
-        "title": "Victoria",
-        "transform": [
-          {
-            "filter": {
-              "field": "STATE_NAME",
-              "equal": "Victoria"
-            }
-          }
-        ],
-        "mark": "bar",
-        "encoding": {
-          "y": {
-            "field": "year",
-            "axis": null,
-            "sort": "descending"
-          },
-          "x": {
-            "field": "num_earthquakes_per_area",
-            "type": "quantitative",
-            "title": "Number of Earthquakes per 100,000 km²",
-            "axis": {"format": "d"},
-            "scale": {
-              "domain": [0, 90]
-            }
-          },
-          "color": {
-            "value": "#1f77b4"
-          },
-          "tooltip": [
-            {"field": "STATE_NAME", "type": "nominal", "title": "State"},
-            {"field": "year", "type": "ordinal", "title": "Year"},
-            {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
-          ]
-        }
-      }
-    ],
-    "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_data.csv",
+    "format": {
+      "type": "csv"
     }
+  },
+  "title": {
+    "text": "Earthquake Frequency Comparison",
+    "fontSize": 16,
+    "anchor": "middle",
+    "align": "center",
+    "font": "Open Sans, sans-serif"
+  },
+  "spacing": 0,
+  "hconcat": [
+    {
+      "title": "Western Australia",
+      "transform": [
+        {
+          "filter": {
+            "field": "STATE_NAME",
+            "equal": "Western Australia"
+          }
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "year",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "field": "num_earthquakes_per_area",
+          "type": "quantitative",
+          "title": "Number of Earthquakes per 100,000 km²",
+          "axis": {"format": "d"},
+          "sort": "descending",
+          "scale": {
+            "domain": [0, 90]
+          }
+        },
+        "color": {
+          "value": "#ff7f0e"
+        },
+        "tooltip": [
+          {"field": "STATE_NAME", "type": "nominal", "title": "State"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "font": "Open Sans, sans-serif"
+      },
+      "encoding": {
+        "y": {
+          "field": "year",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": {
+          "field": "year",
+          "type": "ordinal"
+        }
+      }
+    },
+    {
+      "title": "Victoria",
+      "transform": [
+        {
+          "filter": {
+            "field": "STATE_NAME",
+            "equal": "Victoria"
+          }
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "year",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "field": "num_earthquakes_per_area",
+          "type": "quantitative",
+          "title": "Number of Earthquakes per 100,000 km²",
+          "axis": {"format": "d"},
+          "scale": {
+            "domain": [0, 90]
+          }
+        },
+        "color": {
+          "value": "#1f77b4"
+        },
+        "tooltip": [
+          {"field": "STATE_NAME", "type": "nominal", "title": "State"},
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false, "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"},
+    "legend": {"labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"}
   }
-  
+}

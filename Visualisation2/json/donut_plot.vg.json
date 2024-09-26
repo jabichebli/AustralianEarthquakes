@@ -1,0 +1,218 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Total Number of Earthquakes per State (2008-2024)",
+    "fontSize": 16,
+    "font": "Open Sans, sans-serif",
+    "anchor": "middle"
+  },
+  "data": {
+    "values": [
+      {"State": "Victoria", "value": 778},
+      {"State": "New South Wales", "value": 1602},
+      {"State": "South Australia", "value": 2017},
+      {"State": "Queensland", "value": 536},
+      {"State": "Northern Territory", "value": 1218},
+      {"State": "Western Australia", "value": 7900},
+      {"State": "Tasmania", "value": 155},
+      {"State": "ACT", "value": 15}
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "datum.value / 11366 * 100",
+      "as": "percentage"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 50
+      },
+      "encoding": {
+        "theta": {
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "State",
+          "type": "nominal",
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {"field": "value", "type": "quantitative", "title": "Total Number of Earthquakes"},
+          {"field": "percentage", "type": "quantitative", "format": ".2f", "title": "Percentage Share (%)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -200,
+        "dy": 30,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "Western Australia" },
+        "color": {
+          "value": "pink"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 40,
+        "dy": 110,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "Victoria" },
+        "color": {
+          "value": "purple"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 70,
+        "dy": 90,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "Tasmania" },
+        "color": {
+          "value": "yellow"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 100,
+        "dy": 35,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "South Australia" },
+        "color": {
+          "value": "green"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 110,
+        "dy": -20,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "Queensland" },
+        "color": {
+          "value": "lightblue"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 100,
+        "dy": -60,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "Northern Territory" },
+        "color": {
+          "value": "red"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 60,
+        "dy": -100,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "New South Wales" },
+        "color": {
+          "value": "orange"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -10,
+        "dy": -110,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "ACT" },
+        "color": {
+          "value": "blue"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -30,
+        "dy": 0,
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "2008-2014" },
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

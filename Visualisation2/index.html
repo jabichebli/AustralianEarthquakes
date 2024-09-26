@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Australian Earthquakes</title>
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+  <!-- JS file -->
+  <script src="vega_lite_vis.js"></script>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      
+      <div class="pure-u-1-1" id = "title">
+        <h1 style="margin-top: 35px; margin-bottom: 0px; font-size: 60px; font-family: 'Righteous';">AUSTRALIAN EARTHQUAKES</h1>
+        <p style="margin-top: 5px; ">2008-2024</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2 style = "font-family: 'Righteous'; text-align: left;">Earthquakes Around Australia</h2>
+          <p class = "body-text">Australia is not typically known for its seismic activity, but it has in the past
+            experienced significant earthquakes that have shaped its landscape and communities. Experts are 
+            concerned that due to long periods without excessive earthquake acitivity is causing us to be 
+            complacent <a href="https://www.theguardian.com/environment/article/2024/sep/10/what-are-earthquake-swarms-australia-risk-hunter-region" target="_blank">[1]</a>. In September 2024, a new term was dubbed by seisomologists, 'earthquake swarms',
+            after more than 30 seismic events recorded hit the Hunter region of New South Wales. While swarms 
+            occurred naturally and are not uncommon, some human activities could induce them - such as mining.
+            As such, experts are concerned about how buildings are being designed, and the location of very critical
+            building proposals, such as where nuclear power plants could be built. 
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="bar_plot" class="pure-u-2" style = "margin-top: 70px"></div>
+      </div>
+
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p class = "body-text" style = "margin-bottom: 0px;">One of Australia's most serious natural disaster Earthquakes occurred in Newcastle, 
+            NSW in 1989. The earthquake that hit Newcastle had a magnitude of 5.6 on the Richter scale <a href="https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake" target="_blank">[2]</a>. It resulted in:
+            <li> 13 lives: 9 people died at the Newcastle Workers Club, 3 people were killed in Beaumont Street Hamilton, and one person died of shock </li>
+            <li> 160 people hospitalised</li>
+            <li> 50,000 buildings were damaged (approximately 40,000 of these were homes)</li>
+            <li> 300 buildings were demolished</li>
+            <li> 300,000 people were affected and 1,000 were made homeless</li>
+            <li> a damage bill estimated to be about $4 billion </li> 
+          </p>
+        </div>
+      </div>
+            <!-- Earthquake Image with Caption -->
+      <div class="pure-u-1-2">
+        <img src="img/newcastle_earthquake_1989.jpg" alt="A visual representation of the damages of the Newcastle Earthquake in 1989" class="pure-img" style = "margin-top: 70px;" />
+        <p id = "figure-caption">The Newcastle, NSW 1989 Earthquake <a href="https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake" target="_blank">[2]</a>.</p>
+      </div>
+    
+          <!-- Earthquake Data Table -->
+    <div class="pure-g">
+      <div class = "pure-u-1-1">
+        <h2 style = "font-family: 'Righteous'; text-align: left;">Earthquake Effects by Magnitude and Depth</h2>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p class = "body-text" style = "margin-bottom: 0px;">Earthquake magnitude and depth are crucial factors 
+            that significantly influence the level of damage caused by a seismic event. The magnitude of an 
+            earthquake, measured on the Richter scale or the moment magnitude scale, quantifies the energy 
+            released at the earthquake's source. Generally, higher magnitude earthquakes release more energy, 
+            resulting in greater potential for destruction. Fortunately, Australia has never experienced an 
+            earthquake of Magntiude higher than 6.4. However, the depth at which an earthquake occurs 
+            also plays a vital role in determining its impact. Shallow earthquakes, typically occurring at 
+            depths less than 70 kilometers, tend to cause more intense shaking and damage at the surface because 
+            the seismic waves have less distance to travel. In contrast, deeper earthquakes, occurring at greater 
+            depths, may dissipate their energy before reaching the surface, leading to less noticeable effects. 
+            Therefore, a magnitude 6.0 earthquake that strikes at a depth of 10 kilometers can cause far more 
+            damage than a magnitude 6.5 earthquake occurring at a depth of 100 kilometers.
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <table class="pure-table" style = "font-size: 16px; margin-top: 20px;">
+          <thead>
+            <tr>
+              <th>Magnitude</th>
+              <th>Earthquake Effects</th>
+              <th>Estimated Number Each Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.5 or less</td>
+              <td>Usually not felt, but can be recorded by seismograph.</td>
+              <td>Millions</td>
+            </tr>
+            <tr>
+              <td>2.5 to 5.4</td>
+              <td>Often felt, but only causes minor damage.</td>
+              <td>500,000</td>
+            </tr>
+            <tr>
+              <td>5.5 to 6.0</td>
+              <td>Slight damage to buildings and other structures.</td>
+              <td>350</td>
+            </tr>
+            <tr>
+              <td>6.1 to 6.9</td>
+              <td>May cause a lot of damage in very populated areas.</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>7.0 to 7.9</td>
+              <td>Major earthquake. Serious damage.</td>
+              <td>10-15</td>
+            </tr>
+            <tr>
+              <td>8.0 or greater</td>
+              <td>Great earthquake. Can totally destroy communities near the epicenter.</td>
+              <td>One every year or two</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id = "figure-caption">Earthquake Magnitude Guide. <a href="https://www.mtu.edu/geo/community/seismology/learn/earthquake-measure/magnitude/" target="_blank">[3]</a>.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+      <div class="pure-u-1-1">
+        <div id="show_map" class="pure-u-2"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2 style = "font-family: 'Righteous'; text-align: left;">Dangers of Earthquakes Per State</h2>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p class = "body-text" style = "margin-bottom: 0px;">Each state in Australia faces unique risks associated with earthquakes, but the level of susceptibility 
+            varies considerably. Historically, data reveals that Western Australia has experienced the highest number 
+            of seismic events, followed by South Australia and New South Wales. However, it's essential to consider 
+            the geographical context-Western Australia spans an area 11 times larger than Victoria, which skews the 
+            perception of its earthquake activity <a href="https://www.ga.gov.au/scientific-topics/national-location-information/dimensions/area-of-australia-states-and-territories" target="_blank">[4]</a>. Surprisingly, despite being the second-largest state, Queensland 
+            ranks among the lowest for seismic occurrences. This discrepancy can largely be attributed to the complex 
+            nature of tectonic activity and fault lines. 
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="donut_plot" class="pure-u-2" style = "margin-top: 45px; width: 550px; height: auto;"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p class = "body-text" style = "margin-bottom: 40px;">Earthquakes result from sudden movements along faults-fractures in the Earth's crust where tectonic plates 
+            interact. These movements are driven by the immense pressure that builds up over time as plates shift. States 
+            like Victoria and New South Wales, located near more active tectonic boundaries, are at greater risk due to 
+            the presence of several significant fault lines, such as the Napier and Tarrabool faults. Conversely, while 
+            Western Australia has experienced many earthquakes, much of its seismic activity occurs in sparsely populated 
+            areas, resulting in less damage and fewer reported impacts. Understanding these dynamics is crucial for assessing 
+            earthquake risks and implementing effective preparedness strategies tailored to each state's unique geological 
+            landscape.</p>
+        </div>
+      </div>
+
+      
+      <div class="pure-u-1-2">
+        <img src="img/world_tectonic_plates.jpeg" alt="A visual representation of the damages of the Newcastle Earthquake in 1989" class="pure-img"  />
+        <p id = "figure-caption">World Map of the Tectonic Plates <a href="https://en.wikipedia.org/wiki/Plate_tectonics" target="_blank">[5]</a>.</p>
+      </div>
+
+      <div class="pure-u-1-1" >
+        <div id="choropleth_plot" class="pure-u-2" style = "width: 475px;"></div>
+      </div>
+
+
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p class = "body-text" style = "margin-bottom: 80px;">The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed.The first column contains text and the second column contains a visualisation.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed.</p>
+        </div>
+      </div>
+
+      <div class="pure-u-1-2">
+        <div id="population_pyramid" class="pure-u-2"></div>
+      </div>
+
+      <div class="pure-u-1-1">
+        <div id="bubble_plot" class="pure-u-2"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1 small-font" id = "footer">
+        <p>This visualisation is created by <a href="https://github.com/jabichebli" target="_blank">Jason Abi Chebli</a>. The datasource used for the visualisations can be found in my <a href="https://github.com/jabichebli/FIT3179/tree/main/week10_homework/data" target="_blank">online github repository</a>.</p>
+        <h4> Visualisation Data Source</h4>
+        <p>Geoscience Australia (2024). Earthquakes@GA. [online] Ga.gov.au. Available at: https://earthquakes.ga.gov.au/.</p>
+        <h4> Images and Facts Sources </h4>
+        <p>[1] Stock, P. (2024). What are earthquake swarms - and is Australia at risk? [online] the Guardian. Available at: https://www.theguardian.com/environment/article/2024/sep/10/what-are-earthquake-swarms-australia-risk-hunter-region [Accessed 20 September 2024].<br><br>
+        [2] Newcastle Libraries. (2023). The Newcastle 1989 Earthquake. [online] Available at: https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake [Accessed 20 September 2024].<br><br>
+        [3] Michigan Tech (2023). Earthquake Magnitude Scale | UPSeis. [online] Michigan Technological University. Available at: https://www.mtu.edu/geo/community/seismology/learn/earthquake-measure/magnitude/ [Accessed 20 September 2024].<br><br>
+        [4] Geoscience Australia (2023). Area of Australia - States and Territories. [online] Ga.gov.au. Available at: https://www.ga.gov.au/scientific-topics/national-location-information/dimensions/area-of-australia-states-and-territories [Accessed 20 September 2024].<br><br>
+        [5] Bitton, M. (2022). Plate tectonics. [online] Wikipedia. Available at: https://en.wikipedia.org/wiki/Plate_tectonics [Accessed 20 September 2024].
+      </p>
+      <p style = "text-align: right;">© Jason Abi Chebli, 2024</p>
+      
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  </div> <!-- end page -->
+</body>
+
+</html>

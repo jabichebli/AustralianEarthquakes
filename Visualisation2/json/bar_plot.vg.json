@@ -1,0 +1,102 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Number of Earthquakes in Australia from 2008 to Q3 2024",
+        "fontSize": 16,
+        "anchor": "middle",
+        "align": "center",
+        "font": "Open Sans, sans-serif"
+    },
+    "data": {
+        "values": [
+            {"Year": "2008", "Number of Earthquakes": 2940},
+            {"Year": "2009", "Number of Earthquakes": 694},
+            {"Year": "2010", "Number of Earthquakes": 378},
+            {"Year": "2011", "Number of Earthquakes": 544},
+            {"Year": "2012", "Number of Earthquakes": 582},
+            {"Year": "2013", "Number of Earthquakes": 590},
+            {"Year": "2014", "Number of Earthquakes": 636},
+            {"Year": "2015", "Number of Earthquakes": 686},
+            {"Year": "2016", "Number of Earthquakes": 669},
+            {"Year": "2017", "Number of Earthquakes": 740},
+            {"Year": "2018", "Number of Earthquakes": 1392},
+            {"Year": "2019", "Number of Earthquakes": 901},
+            {"Year": "2020", "Number of Earthquakes": 521},
+            {"Year": "2021", "Number of Earthquakes": 505},
+            {"Year": "2022", "Number of Earthquakes": 716},
+            {"Year": "2023", "Number of Earthquakes": 521},
+            {"Year": "2024", "Number of Earthquakes": 495}
+        ]
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "stroke": null, 
+                "cursor": "pointer"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "ordinal"
+                },
+                "y": {
+                    "field": "Number of Earthquakes",
+                    "type": "quantitative"
+                },
+                "fill": {
+                    "condition": {
+                        "test": "datum.Year === '2008' || datum.Year === '2018'",
+                        "value": "#0c00ad"  
+                    },
+                    "value": "#B0B0B0"
+                },
+                "tooltip": [
+                    {"field": "Year", "type": "ordinal"},
+                    {"field": "Number of Earthquakes", "type": "quantitative", "title": "Total Number of Earthquakes"}
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": -130,
+                "dy": -80,
+                "fontSize": 12,
+                "fontStyle": "italic",
+                "font": "Open Sans, sans-serif"
+            },
+            "encoding": {
+                "text": { "value": "Largest number of earthquakes" },
+                "color": { "value": "black" }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "dx": -80,
+                "dy": -10,
+                "fontSize": 12,
+                "fontStyle": "italic",
+                "font": "Open Sans, sans-serif"
+            },
+            "encoding": {
+                "text": { "value": "Second largest number of earthquakes" },
+                "color": { "value": "black" }
+            }
+        }
+    ],
+    "config": {
+        "view": {
+            "stroke": null 
+        },
+        "scale": {
+            "bandPaddingInner": 0.2,
+            "font": "Open Sans, sans-serif"
+        }
+    }
+}

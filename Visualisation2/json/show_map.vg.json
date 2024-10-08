@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent",
   "width": 800,
   "height": 400,
   "title": {
@@ -73,7 +74,7 @@
           "title": "Depth (km)",
           "scale": {
             "domain": ["0-5", "5-10", "10-15", "15+"],
-            "range": ["#ffcccc", "#ff9999", "#ff6666", "#ff3333"]
+            "range": ["#A7D3D5", "#6BA4A8", "#3E7B7D", "#02343F"]
           }
         },
         "tooltip": [

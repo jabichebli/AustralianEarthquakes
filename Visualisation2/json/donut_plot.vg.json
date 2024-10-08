@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent",
   "title": {
     "text": "Total Number of Earthquakes per State (2008-2024)",
     "fontSize": 16,
@@ -97,7 +98,7 @@
       "encoding": {
         "text": { "value": "Tasmania" },
         "color": {
-          "value": "yellow"
+          "value": "#f2cc41"
         }
       }
     },
@@ -203,7 +204,7 @@
         "fontStyle": "italic"
       },
       "encoding": {
-        "text": { "value": "2008-2014" },
+        "text": { "value": "2008-2024" },
         "color": {
           "value": "black"
         }

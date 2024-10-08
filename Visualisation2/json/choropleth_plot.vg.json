@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "transparent",
   "width": 800,
   "height": 400,
   "title": {
@@ -62,7 +63,7 @@
           "type": "quantitative",
           "scale": {
             "domain": [0, 20],
-            "range": ["lightblue", "darkblue"]
+            "range": ["#A7D3D5", "#02343F"]
           },
           "legend": {
             "title": "Earthquakes per 100,000 km²"

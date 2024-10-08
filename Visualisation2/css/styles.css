@@ -4,15 +4,16 @@ body *{
 
 h1 {
     font-weight: 900;
+    color: #F0EDCC;
 }
 
 body {
-    background-color: lightgray;
+    background-color: grey; /* Makes the background grey*/
 }
 
 .page {
     width: 950px;
-    background-color: white;
+    background-color: #F0EDCC;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -46,7 +47,7 @@ h1 {
 
 #title {
     text-align: center;
-    background-color: #0a91ff;
+    background-color: #02343F;
     font-size: 20px;
     font-family: "Righteous", sans-serif;
     /* background-image: url("img/earthquake_crack.jpg"); */

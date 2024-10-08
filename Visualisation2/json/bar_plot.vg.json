@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
     "title": {
         "text": "Number of Earthquakes in Australia from 2008 to Q3 2024",
         "fontSize": 16,
@@ -47,7 +48,7 @@
                 "fill": {
                     "condition": {
                         "test": "datum.Year === '2008' || datum.Year === '2018'",
-                        "value": "#0c00ad"  
+                        "value": "#02343F"  
                     },
                     "value": "#B0B0B0"
                 },

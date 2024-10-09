@@ -39,16 +39,22 @@
             "encoding": {
                 "x": {
                     "field": "Year",
-                    "type": "ordinal"
+                    "type": "ordinal",
+                    "axis": {
+                        "grid": false
+                    }
                 },
                 "y": {
                     "field": "Number of Earthquakes",
-                    "type": "quantitative"
+                    "type": "quantitative",
+                    "axis": {
+                        "grid": false
+                    }
                 },
                 "fill": {
                     "condition": {
                         "test": "datum.Year === '2008' || datum.Year === '2018'",
-                        "value": "#02343F"  
+                        "value": "#5e3717"  
                     },
                     "value": "#B0B0B0"
                 },
@@ -67,11 +73,12 @@
                 "dy": -80,
                 "fontSize": 12,
                 "fontStyle": "italic",
-                "font": "Open Sans, sans-serif"
+                "font": "Open Sans, sans-serif",
+                "fontWeight": 40
             },
             "encoding": {
                 "text": { "value": "Largest number of earthquakes" },
-                "color": { "value": "black" }
+                "color": { "value": "gray" }
             }
         },
         {
@@ -79,7 +86,7 @@
                 "type": "text",
                 "align": "left",
                 "baseline": "middle",
-                "dx": -80,
+                "dx": -70,
                 "dy": -10,
                 "fontSize": 12,
                 "fontStyle": "italic",
@@ -87,7 +94,7 @@
             },
             "encoding": {
                 "text": { "value": "Second largest number of earthquakes" },
-                "color": { "value": "black" }
+                "color": { "value": "gray" }
             }
         }
     ],

@@ -4,7 +4,7 @@ body *{
 
 h1 {
     font-weight: 900;
-    color: #F0EDCC;
+    color: #97c9b6;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 .page {
     width: 950px;
-    background-color: #F0EDCC;
+    background-color: #97c9b6;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -47,7 +47,7 @@ h1 {
 
 #title {
     text-align: center;
-    background-color: #02343F;
+    background-color: #5e3717;
     font-size: 20px;
     font-family: "Righteous", sans-serif;
     /* background-image: url("img/earthquake_crack.jpg"); */
@@ -88,4 +88,26 @@ h1 {
 li{
     text-align: justify;
     line-height: 25px;
+}
+
+.pure-table th,
+.pure-table td {
+  border-left: 2px solid #5e3717; /* Left border */
+  border-right: 2px solid #5e3717; /* Right border */
+  padding: 8px; /* Add some padding for better appearance */
+  text-align: center;
+}
+.pure-table th {
+  background-color: #5e3717; /* Header background */
+  color: #97c9b6; /* Header text color */
+}
+.pure-table tr {
+  border-bottom: none; /* Bottom border for each row */
+}
+.pure-table tr:last-child {
+  border-bottom: 2px solid #5e3717; /* Remove the bottom border for the last row */
+}
+
+.vega-embed summary {
+    display: none !important;
 }

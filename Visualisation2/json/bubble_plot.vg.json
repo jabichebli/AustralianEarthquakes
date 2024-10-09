@@ -4,7 +4,7 @@
   "width": 500,
   "height": 400,
   "title": {
-    "text": "Trends in Australian Earthquakes: A State-by-State Analysis (2008-2024)",
+    "text": "Trends in Australian Earthquakes: A State-by-State Analysis* (2008-2024)",
     "fontSize": 16,
     "anchor": "middle",
     "font": "Open Sans, sans-serif"
@@ -33,7 +33,7 @@
         "input": "select",
         "options": [null, "VIC", "SA", "NT", "TAS", "NSW", "QLD", "WA"],
         "labels": ["All States", "Victoria", "South Australia", "Northern Territory", "Tasmania", "New South Wales", "Queensland", "Western Australia"],
-        "name": "State Selection"
+        "name": "State"
       }
     },
     {
@@ -42,7 +42,7 @@
         "input": "select",
         "options": [null, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
         "labels": ["All Years", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"],
-        "name": "Year Selection"
+        "name": "Year "
       }
     },
     {
@@ -52,11 +52,16 @@
         "min": 1.3,
         "max": 3.38,
         "step": 0.05,
-        "name": "Average Magnitude Selection"
+        "name": "Minimum Average Magnitude "
       },
       "value": 1.8 
     }
   ],
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "layer": [
     {
       "mark": "circle",
@@ -64,17 +69,35 @@
         "x": {
           "field": "largest_mag_earthquake",
           "type": "quantitative",
-          "title": "Largest Magnitude Earthquake"
+          "title": "Largest Magnitude Earthquake",
+          "axis": {
+            "grid": false
+          }
         },
         "y": {
           "field": "num_earthquakes_per_area",
           "type": "quantitative",
-          "title": "Number of Earthquakes per 100,000km²"
+          "title": "Number of Earthquakes per 100,000km²",
+          "axis": {
+            "grid": false
+          }
         },
         "color": {
           "field": "state",
           "type": "nominal",
-          "title": "State"
+          "title": "State",
+          "scale": {
+            "domain": ["VIC", "NSW", "SA", "QLD", "NT", "WA", "TAS"],
+            "range": [
+              "#0072B2",  
+              "#56B4E9",  
+              "#009E73",  
+              "#F0E442",  
+              "#E69F00",  
+              "#804413",  
+              "#CC79A7"   
+            ]
+          }
         },
         "size": {
           "field": "avg_mag",
@@ -92,6 +115,24 @@
           { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number Earthquakes per 100,000 km²", "format": ".2f" },
           { "field": "avg_mag", "type": "quantitative", "title": "Average Magnitude", "format": ".2f" }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": -120,
+        "dy": -210, 
+        "fontSize": 12,
+        "font": "Open Sans, sans-serif",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": { "value": "*Not including Australian Capital Territory." },
+        "color": {
+          "value": "gray"
+        }
       }
     },
     {

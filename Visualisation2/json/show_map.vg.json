@@ -19,7 +19,7 @@
         "min": 0,
         "max": 6.4,
         "step": 0.1,
-        "name": "Min Magnitude"
+        "name": "Minimum Magnitude "
       }
     },
     {
@@ -30,7 +30,7 @@
         "min": 0,
         "max": 6.4,
         "step": 0.1,
-        "name": "Max Magnitude"
+        "name": "Maximum Magnitude "
       }
     }
   ],
@@ -40,7 +40,7 @@
         "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week9_homework/json/australia.json",
         "format": {"type": "topojson", "feature": "australia"}
       },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": "#FFE4B5", "stroke": "white"}
     },
     {
       "data": {
@@ -74,7 +74,7 @@
           "title": "Depth (km)",
           "scale": {
             "domain": ["0-5", "5-10", "10-15", "15+"],
-            "range": ["#A7D3D5", "#6BA4A8", "#3E7B7D", "#02343F"]
+            "range": ["#C2A98D", "#9B6D58", "#7B4B3A", "#5e3717"]
           }
         },
         "tooltip": [

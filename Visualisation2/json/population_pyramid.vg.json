@@ -17,7 +17,11 @@
   "spacing": 0,
   "hconcat": [
     {
-      "title": "Western Australia",
+      "title": {
+        "text": "Western Australia",
+        "fontSize": 14,
+        "color": "#804413"
+      },
       "transform": [
         {
           "filter": {
@@ -26,36 +30,108 @@
           }
         }
       ],
-      "mark": "bar",
-      "encoding": {
-        "y": {
-          "field": "year",
-          "axis": null,
-          "sort": "descending"
-        },
-        "x": {
-          "field": "num_earthquakes_per_area",
-          "type": "quantitative",
-          "title": "Number of Earthquakes per 100,000 km²",
-          "axis": {"format": "d"},
-          "sort": "descending",
-          "scale": {
-            "domain": [0, 90]
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "year",
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "field": "num_earthquakes_per_area",
+              "type": "quantitative",
+              "title": "Number of Earthquakes per 100,000 km²",
+              "axis": { "format": "d" },
+              "sort": "descending",
+              "scale": {
+                "domain": [0, 90]
+              }
+            },
+            "color": {
+              "value": "#804413"
+            },
+            "tooltip": [
+              { "field": "STATE_NAME", "type": "nominal", "title": "State" },
+              { "field": "year", "type": "ordinal", "title": "Year" },
+              { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f" }
+            ]
           }
         },
-        "color": {
-          "value": "#ff7f0e"
+        {
+          "transform": [
+            {
+              "calculate": "'WA experienced its; second largest number; of earthquakes in 2018.'",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -80,
+            "dy": 25,
+            "fontSize": 12,
+            "font": "Open Sans, sans-serif",
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {
+              "field": "text_annotation",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "gray"
+            },
+            "y": {
+              "value": 40
+            }
+          }
         },
-        "tooltip": [
-          {"field": "STATE_NAME", "type": "nominal", "title": "State"},
-          {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
-        ]
-      }
+        {
+          "transform": [
+            {
+              "calculate": "'In 2015 WA experienced; its lowest number; of earthquakes.'",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -80,
+            "dy": 145,
+            "fontSize": 12,
+            "font": "Open Sans, sans-serif",
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {
+              "field": "text_annotation",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "gray"
+            },
+            "y": {
+              "value": 40
+            }
+          }
+        }
+      ]
     },
     {
       "width": 20,
-      "view": {"stroke": null},
+      "view": { "stroke": null },
       "mark": {
         "type": "text",
         "align": "center",
@@ -75,7 +151,11 @@
       }
     },
     {
-      "title": "Victoria",
+      "title": {
+        "text": "Victoria",
+        "fontSize": 14,
+        "color": "#0072B2"
+      },
       "transform": [
         {
           "filter": {
@@ -84,36 +164,108 @@
           }
         }
       ],
-      "mark": "bar",
-      "encoding": {
-        "y": {
-          "field": "year",
-          "axis": null,
-          "sort": "descending"
-        },
-        "x": {
-          "field": "num_earthquakes_per_area",
-          "type": "quantitative",
-          "title": "Number of Earthquakes per 100,000 km²",
-          "axis": {"format": "d"},
-          "scale": {
-            "domain": [0, 90]
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "year",
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "field": "num_earthquakes_per_area",
+              "type": "quantitative",
+              "title": "Number of Earthquakes per 100,000 km²",
+              "axis": { "format": "d" },
+              "scale": {
+                "domain": [0, 90]
+              }
+            },
+            "color": {
+              "value": "#0072B2"
+            },
+            "tooltip": [
+              { "field": "STATE_NAME", "type": "nominal", "title": "State" },
+              { "field": "year", "type": "ordinal", "title": "Year" },
+              { "field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f" }
+            ]
           }
         },
-        "color": {
-          "value": "#1f77b4"
+        {
+          "transform": [
+            {
+              "calculate": "'VIC experienced its; second largest number; of earthquakes in 2021.'",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -50,
+            "dy": 55,
+            "fontSize": 12,
+            "font": "Open Sans, sans-serif",
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {
+              "field": "text_annotation",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "gray"
+            },
+            "y": {
+              "value": 40
+            }
+          }
         },
-        "tooltip": [
-          {"field": "STATE_NAME", "type": "nominal", "title": "State"},
-          {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "num_earthquakes_per_area", "type": "quantitative", "title": "Number of Earthquakes per 100,000 km²", "format": ".2f"}
-        ]
-      }
+        {
+          "transform": [
+            {
+              "calculate": "'In 2008 VIC had 1.5x; more earthquakes than; WA.'",
+              "as": "text_annotation_raw"
+            },
+            {
+              "calculate": "split(datum.text_annotation_raw, ';')",
+              "as": "text_annotation"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -30,
+            "dy": 220,
+            "fontSize": 12,
+            "font": "Open Sans, sans-serif",
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {
+              "field": "text_annotation",
+              "type": "nominal"
+            },
+            "color": {
+              "value": "gray"
+            },
+            "y": {
+              "value": 40
+            }
+          }
+        }
+      ]
     }
   ],
   "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": false, "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"},
-    "legend": {"labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif"}
+    "view": { "stroke": null},
+    "axis": { "grid": false, "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif" },
+    "legend": { "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif" }
   }
 }

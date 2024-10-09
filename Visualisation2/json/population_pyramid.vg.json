@@ -78,7 +78,8 @@
             "dy": 25,
             "fontSize": 12,
             "font": "Open Sans, sans-serif",
-            "fontStyle": "italic"
+            "fontStyle": "italic",
+            "fontWeight": "normal"
           },
           "encoding": {
             "text": {
@@ -112,7 +113,8 @@
             "dy": 145,
             "fontSize": 12,
             "font": "Open Sans, sans-serif",
-            "fontStyle": "italic"
+            "fontStyle": "italic",
+            "fontWeight": "normal"
           },
           "encoding": {
             "text": {
@@ -211,7 +213,8 @@
             "dy": 55,
             "fontSize": 12,
             "font": "Open Sans, sans-serif",
-            "fontStyle": "italic"
+            "fontStyle": "italic",
+            "fontWeight": "normal"
           },
           "encoding": {
             "text": {
@@ -243,9 +246,10 @@
             "baseline": "middle",
             "dx": -30,
             "dy": 220,
-            "fontSize": 12,
+            "fontSize": 11.5,
             "font": "Open Sans, sans-serif",
-            "fontStyle": "italic"
+            "fontStyle": "italic",
+            "fontWeight": "normal"
           },
           "encoding": {
             "text": {
@@ -264,7 +268,7 @@
     }
   ],
   "config": {
-    "view": { "stroke": null},
+    "view": { "stroke": null },
     "axis": { "grid": false, "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif" },
     "legend": { "labelFont": "Open Sans, sans-serif", "titleFont": "Open Sans, sans-serif" }
   }

@@ -93,6 +93,101 @@
           {"field": "depth", "title": "Depth (km)"}
         ]
       }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -200,
+        "dy": 300
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 50},
+        "text": {"value": "Southern states are more susceptible to earthquakes."},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -310,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 100},
+        "text": {"value": "Northern parts of WA experience"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -300,
+        "dy": 25
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 100},
+        "text": {"value": "a high amount of deep earthquakes."},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": 300,
+        "dy": 200
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 150},
+        "text": {"value": "Victoria experiences a large amount of earthquakes."},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": 310,
+        "dy": 215 
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 150},
+        "text": {"value": "because there are a lot of fault lines that pass through it."},
+        "fill": {"value": "gray"}
+      }
     }
   ],
   "config": {

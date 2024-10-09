@@ -81,6 +81,101 @@
           }
         ]
       }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -200,
+        "dy": 270
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 50},
+        "text": {"value": "Ignoring Canberra, Victoria has the highest average number of earthquakes per 100,000km²."},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -322,
+        "dy": -40
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 100},
+        "text": {"value": "Ignoring Canberra, WA experiences the second"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": -300,
+        "dy": -25
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 100},
+        "text": {"value": " highest average number of earthquakes per 100,000km²."},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": 360,
+        "dy": 130
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 150},
+        "text": {"value": "Australian Capital Territory has the highest total number"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11.5,
+        "fontStyle": "italic",
+        "font": "Open Sans, sans-serif",
+        "dx": 350,
+        "dy": 145 
+      },
+      "encoding": {
+        "x": {"value": 400},
+        "y": {"value": 150},
+        "text": {"value": "of earthquakes per 100,000km² due to its small size."},
+        "fill": {"value": "gray"}
+      }
     }
   ],
   "projection": {

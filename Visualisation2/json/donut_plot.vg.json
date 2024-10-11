@@ -28,7 +28,9 @@
     {
       "mark": {
         "type": "arc",
-        "innerRadius": 50
+        "innerRadius": 50,
+        "stroke": "#97c9b6", 
+        "strokeWidth": 2 
       },
       "encoding": {
         "theta": {
@@ -51,12 +53,12 @@
             ],
             "range": [
                 "#0072B2",  
-                "#505050",  
-                "#D3D3D3",  
-                "#A9A9A9",  
-                "#696969",    
-                "#804413",    
-                "#333333"    
+                "#B0B0B0", 
+                "#B0B0B0",  
+                "#B0B0B0",  
+                "#B0B0B0",  
+                "#804413",  
+                "#B0B0B0"   
             ]
           }
         },
@@ -117,7 +119,7 @@
       "encoding": {
         "text": { "value": "Tasmania" },
         "color": {
-          "value": "#333333"
+          "value": "gray" 
         }
       }
     },
@@ -135,7 +137,7 @@
       "encoding": {
         "text": { "value": "South Australia" },
         "color": {
-          "value": "#D3D3D3"
+          "value": "gray"
         }
       }
     },
@@ -153,7 +155,7 @@
       "encoding": {
         "text": { "value": "Queensland" },
         "color": {
-          "value": "#A9A9A9"
+          "value": "gray" 
         }
       }
     },
@@ -171,7 +173,7 @@
       "encoding": {
         "text": { "value": "Northern Territory" },
         "color": {
-          "value": "#696969"
+          "value": "gray" 
         }
       }
     },
@@ -189,7 +191,7 @@
       "encoding": {
         "text": { "value": "New South Wales" },
         "color": {
-          "value": "#505050"
+          "value": "gray"
         }
       }
     },
@@ -230,18 +232,18 @@
       }
     },
     {
-"data": {
-  "values": [{}]
-},
-"mark": {
-  "type": "image",
-  "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/arrow-pointing-right.png",
-  "x": -60,
-  "y": 160,
-  "width": 90,
-  "height": 80
-}
-}
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/arrow-pointing-right.png",
+        "x": -60,
+        "y": 160,
+        "width": 90,
+        "height": 80
+      }
+    }
   ],
   "config": {
     "view": {

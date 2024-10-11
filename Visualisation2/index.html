@@ -45,37 +45,26 @@
       <div class="pure-u-1-2">
         <div class="description description-left">
           <h2 style = "font-family: 'Righteous'; text-align: left; color: #5e3717">Earthquakes Around Australia</h2>
-          <p class = "body-text">Australia is not typically known for its seismic activity, but it has in the past
-            experienced significant earthquakes that have shaped its landscape and communities. Experts are 
-            concerned that due to long periods without excessive earthquake acitivity is causing us to be 
-            complacent <a href="https://www.theguardian.com/environment/article/2024/sep/10/what-are-earthquake-swarms-australia-risk-hunter-region" target="_blank">[1]</a>. In September 2024, a new term was dubbed by seisomologists, 'earthquake swarms',
-            after more than 30 seismic events recorded hit the Hunter region of New South Wales. While swarms 
-            occurred naturally and are not uncommon, some human activities could induce them - such as mining.
-            As such, experts are concerned about how buildings are being designed, and the location of very critical
-            building proposals, such as where nuclear power plants could be built. 
-          </p>
+          <p class = "body-text">Australia isn't usually associated with seismic activity, but it has experienced significant 
+            earthquakes that have impacted its landscape and communities. Experts warn that long periods without major quakes 
+            may lead to complacency <a href="https://www.theguardian.com/environment/article/2024/sep/10/what-are-earthquake-swarms-australia-risk-hunter-region" target="_blank">[1]</a>. 
+            In September 2024, seismologists introduced the term "earthquake swarms" after over 30 seismic events hit the 
+            Hunter region of New South Wales. While swarms are natural, some human activities, like mining, could induce them. 
+            Experts are particularly concerned about building designs and locations for critical infrastructure, such as nuclear power plants.
         </div>
       </div>
       <div class="pure-u-1-2">
-        <div id="bar_plot" class="pure-u-2" style = "margin-top: 70px"></div>
+        <div id="radial_plot" class="pure-u-2" style = "margin-top: 40px"></div>
       </div>
 
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <p class = "body-text" style = "margin-bottom: 0px;">One of Australia's most serious natural disaster Earthquakes occurred in Newcastle, 
-            NSW in 1989. The earthquake that hit Newcastle had a magnitude of 5.6 on the Richter scale <a href="https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake" target="_blank">[2]</a>. It resulted in:
-            <li> 13 lives: 9 people died at the Newcastle Workers Club, 3 people were killed in Beaumont Street Hamilton, and one person died of shock </li>
-            <li> 160 people hospitalised</li>
-            <li> 50,000 buildings were damaged (approximately 40,000 of these were homes)</li>
-            <li> 300 buildings were demolished</li>
-            <li> 300,000 people were affected and 1,000 were made homeless</li>
-            <li> a damage bill estimated to be about $4 billion </li> 
-          </p>
+          <p class="body-text" style="margin-bottom: 0px;">One of Australia's most serious earthquakes struck Newcastle, NSW in 1989, measuring 5.6 on the Richter scale <a href="https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake" target="_blank">[2]</a>. The impact included:</p> <ul style="margin: 0;"> <li>13 fatalities: 9 at the Newcastle Workers Club, 3 on Beaumont Street, and 1 from shock</li> <li>160 people hospitalized</li> <li>50,000 buildings damaged (about 40,000 homes)</li> <li>300 buildings demolished</li> <li>300,000 people affected, with 1,000 left homeless</li> <li>Estimated damages of around $4 billion</li> </ul>
         </div>
       </div>
             <!-- Earthquake Image with Caption -->
       <div class="pure-u-1-2">
-        <img src="img/newcastle_earthquake_1989.jpg" alt="A visual representation of the damages of the Newcastle Earthquake in 1989" class="pure-img" style = "margin-top: 70px;" />
+        <img src="img/newcastle_earthquake_1989.jpg" alt="A visual representation of the damages of the Newcastle Earthquake in 1989" class="pure-img" style = "margin-top: 20px;" />
         <p id = "figure-caption">The Newcastle, NSW 1989 Earthquake <a href="https://newcastlelibraries.com.au/newcastle-stories/online-collections/the-newcastle-1989-earthquake" target="_blank">[2]</a>.</p>
       </div>
     
@@ -164,7 +153,7 @@
           <p class = "body-text" style = "margin-bottom: 0px;">Each state in Australia faces unique risks associated with earthquakes, but the level of susceptibility 
             varies considerably. Historically, data reveals that <span style="font-weight: bold; color: #804413;">Western Australia</span> has experienced the highest number 
             of seismic events, followed by South Australia and New South Wales. However, it's essential to consider 
-            the geographical context-<span style="font-weight: bold; color: #804413;">Western Australia</span>  spans an area 11 times larger than <span style="font-weight: bold; color: #0072B2;">Victoria</span>, which skews the 
+            the geographical context - <span style="font-weight: bold; color: #804413;">Western Australia</span>  spans an area 11 times larger than <span style="font-weight: bold; color: #0072B2;">Victoria</span>, which skews the 
             perception of its earthquake activity <a href="https://www.ga.gov.au/scientific-topics/national-location-information/dimensions/area-of-australia-states-and-territories" target="_blank">[4]</a>. Surprisingly, despite being the second-largest state, Queensland 
             ranks among the lowest for seismic occurrences. This discrepancy can largely be attributed to the complex 
             nature of tectonic activity and fault lines. 
@@ -172,18 +161,14 @@
         </div>
       </div>
       <div class="pure-u-1-2">
-        <div id="donut_plot" class="pure-u-2" style = "margin-top: 45px; width: 550px; height: auto;"></div>
+        <div id="donut_plot" class="pure-u-2" style = "margin-top: 18px; width: 550px; height: auto;"></div>
       </div>
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <p class = "body-text" style = "margin-bottom: 40px;">Earthquakes result from sudden movements along faults-fractures in the Earth's crust where tectonic plates 
-            interact. These movements are driven by the immense pressure that builds up over time as plates shift. States 
-            like <span style="font-weight: bold; color: #0072B2;">Victoria</span>, and New South Wales, located near more active tectonic boundaries, are at greater risk due to 
-            the presence of several significant fault lines, such as the Napier and Tarrabool faults. Conversely, while 
-            <span style="font-weight: bold; color: #804413;">Western Australia</span> has experienced many earthquakes, much of its seismic activity occurs in sparsely populated 
-            areas, resulting in less damage and fewer reported impacts. Understanding these dynamics is crucial for assessing 
-            earthquake risks and implementing effective preparedness strategies tailored to each state's unique geological 
-            landscape.</p>
+          <p class = "body-text" style = "margin-bottom: 40px; margin-top: 30px;">Earthquakes result from sudden movements along faults-fractures in the Earth's crust where tectonic plates 
+            interact. These movements are driven by the immense pressure that builds up over time as plates shift. Tectonic plates are massive sections of the Earth's crust that float on 
+            the semi-fluid mantle beneath them. These plates constantly move, albeit very slowly, due to convection currents in the mantle. The worst recorded earthquake occurred in 1960 
+            near Valdivia, Chile, measuring a staggering 9.5 on the moment magnitude scale. Earthquakes are common in Chile due to it being placed near the South American Tectonic Plate boarders. </p>
         </div>
       </div>
 
@@ -205,13 +190,15 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <p class = "body-text" style = "margin-bottom: 80px;">The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed.The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed.</p>
+          <p class = "body-text" style = "margin-bottom: 80px;">States 
+            like <span style="font-weight: bold; color: #0072B2;">Victoria</span>, and New South Wales, located near more active tectonic boundaries, are at greater risk due to 
+            the presence of several significant fault lines, such as the Napier and Tarrabool faults. Conversely, while 
+            <span style="font-weight: bold; color: #804413;">Western Australia</span> has experienced many earthquakes, much of its seismic activity occurs in sparsely populated 
+            areas, resulting in less damage and fewer reported impacts. Understanding these dynamics is crucial for assessing 
+            earthquake risks and implementing effective preparedness strategies tailored to each state's unique geological 
+            landscape. When considering the area of the two different states, it becomes more apparent that <span style="font-weight: bold; color: #0072B2;">Victoria</span> on average
+          does experience more earthquakes per area than <span style="font-weight: bold; color: #804413;">Western Australia</span> as can be seen in the population pyramid to the right. Additionally, 
+          the southern states typically experience more number of earthquakes, as can be seen in the bubble plot below with a lot of the nothern states data lying near the x-axis. </p>
         </div>
       </div>
 

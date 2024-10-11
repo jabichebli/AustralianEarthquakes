@@ -1,0 +1,204 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
+    "title": {
+      "text": "Number of Earthquakes in Australia",
+      "fontSize": 16,
+      "anchor": "middle",
+      "align": "center",
+      "font": "Open Sans, sans-serif"
+    },
+    "width": 250,
+    "height": 250,
+    "data": {
+      "values": [
+        {"Year": "2008", "Number of Earthquakes": 2940},
+        {"Year": "2009", "Number of Earthquakes": 694},
+        {"Year": "2010", "Number of Earthquakes": 378},
+        {"Year": "2011", "Number of Earthquakes": 544},
+        {"Year": "2012", "Number of Earthquakes": 582},
+        {"Year": "2013", "Number of Earthquakes": 590},
+        {"Year": "2014", "Number of Earthquakes": 636},
+        {"Year": "2015", "Number of Earthquakes": 686},
+        {"Year": "2016", "Number of Earthquakes": 669},
+        {"Year": "2017", "Number of Earthquakes": 740},
+        {"Year": "2018", "Number of Earthquakes": 1392},
+        {"Year": "2019", "Number of Earthquakes": 901},
+        {"Year": "2020", "Number of Earthquakes": 521},
+        {"Year": "2021", "Number of Earthquakes": 505},
+        {"Year": "2022", "Number of Earthquakes": 716},
+        {"Year": "2023", "Number of Earthquakes": 521},
+        {"Year": "2024", "Number of Earthquakes": 495}
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "arc",
+          "innerRadius": 50,
+          "stroke": "#97c9b6"
+        },
+        "encoding": {
+          "theta": {
+            "field": "Number of Earthquakes",
+            "type": "quantitative",
+            "stack": true
+          },
+          "radius": {
+            "field": "Number of Earthquakes",
+            "scale": {"type": "sqrt", "zero": true, "rangeMin": 50}
+          },
+          "color": {
+            "condition": {
+              "test": "datum.Year === '2008' || datum.Year === '2018'",
+              "value": "#5e3717"
+            },
+            "value": "#B0B0B0"
+          },
+          "tooltip": [
+            {"field": "Year", "type": "ordinal"},
+            {"field": "Number of Earthquakes", "type": "quantitative", "title": "Total Number of Earthquakes"}
+          ]
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontStyle": "italic",
+          "fontWeight":"bold",
+          "font": "Open Sans, sans-serif",
+          "dx": 0,
+          "dy": 0
+        },
+        "encoding": {
+          "text": {"value": "2008-2024"},
+          "fill": {"value": "black"}
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 11.5,
+          "fontStyle": "italic",
+          "font": "Open Sans, sans-serif",
+          "dx": 180,
+          "dy": -60
+        },
+        "encoding": {
+          "text": {"value": "Largest number"},
+          "fill": {"value": "gray"}
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 11.5,
+          "fontStyle": "italic",
+          "font": "Open Sans, sans-serif",
+          "dx": 178,
+          "dy": -45
+        },
+        "encoding": {
+          "text": {"value": "of earthquakes"},
+          "fill": {"value": "gray"}
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 11.5,
+          "fontStyle": "italic",
+          "font": "Open Sans, sans-serif",
+          "dx": -150,
+          "dy": 80
+        },
+        "encoding": {
+          "text": {"value": "Second largest number"},
+          "fill": {"value": "gray"}
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 11.5,
+          "fontStyle": "italic",
+          "font": "Open Sans, sans-serif",
+          "dx": -170,
+          "dy": 95
+        },
+        "encoding": {
+          "text": {"value": "of earthquakes"},
+          "fill": {"value": "gray"}
+        }
+      },
+          {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontStyle": "bold",
+          "font": "Open Sans, sans-serif",
+          "dx": -110,
+          "dy": 50
+        },
+        "encoding": {
+          "text": {"value": "2018"},
+          "fill": {"value": "#5e3717"}
+        }
+      },
+              {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontStyle": "bold",
+          "font": "Open Sans, sans-serif",
+          "dx": 110,
+          "dy": -100
+        },
+        "encoding": {
+          "text": {"value": "2008"},
+          "fill": {"value": "#5e3717"}
+        }
+      },
+          {
+  "data": {
+    "values": [{}]
+  },
+  "mark": {
+    "type": "image",
+    "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/hover_over_left_arrow.png",
+    "x": 280,
+    "y": 180,
+    "width": 90,
+    "height": 80
+  }
+  }
+    ],
+    "config": {
+      "view": {
+        "stroke": null
+      }
+    }
+  }
+  

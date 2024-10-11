@@ -87,6 +87,19 @@
         "values": [{}]
       },
       "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/australia_world_map.png",
+        "x": 830,
+        "y": 340,
+        "width": 175,
+        "height": 400
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
         "type": "text",
         "fontSize": 11.5,
         "fontStyle": "italic",
@@ -153,7 +166,7 @@
       },
       "encoding": {
         "x": {"value": 400},
-        "y": {"value": 150},
+        "y": {"value": 120},
         "text": {"value": "Australian Capital Territory has the highest total number"},
         "fill": {"value": "gray"}
       }
@@ -172,7 +185,7 @@
       },
       "encoding": {
         "x": {"value": 400},
-        "y": {"value": 150},
+        "y": {"value": 120},
         "text": {"value": "of earthquakes per 100,000km² due to its small size."},
         "fill": {"value": "gray"}
       }

@@ -99,6 +99,19 @@
         "values": [{}]
       },
       "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/australia_world_map.png",
+        "x": 830,
+        "y": 250,
+        "width": 175,
+        "height": 400
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
         "type": "text",
         "fontSize": 11.5,
         "fontStyle": "italic",

@@ -265,6 +265,19 @@
           }
         }
       ]
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/curved_hover_over.png",
+        "x": -20,
+        "y": 30,
+        "width": 100,
+        "height": 80
+      }
     }
   ],
   "config": {

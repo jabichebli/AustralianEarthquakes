@@ -73,7 +73,7 @@
         "align": "left",
         "baseline": "middle",
         "dx": -200,
-        "dy": 30,
+        "dy": -60,
         "fontSize": 11.5,
         "fontStyle": "italic",
         "font": "Open Sans, sans-serif"
@@ -228,7 +228,20 @@
           "value": "black"
         }
       }
-    }
+    },
+    {
+"data": {
+  "values": [{}]
+},
+"mark": {
+  "type": "image",
+  "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/arrow-pointing-right.png",
+  "x": -60,
+  "y": 160,
+  "width": 90,
+  "height": 80
+}
+}
   ],
   "config": {
     "view": {

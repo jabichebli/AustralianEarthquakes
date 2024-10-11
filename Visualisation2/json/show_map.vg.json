@@ -102,7 +102,7 @@
         "type": "image",
         "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/australia_world_map.png",
         "x": 830,
-        "y": 250,
+        "y": 255,
         "width": 175,
         "height": 400
       }
@@ -116,7 +116,7 @@
         "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/curved_hover_over.png",
         "x": 650,
         "y": 150,
-        "width": 100,
+        "width": 90,
         "height": 80
       }
     },

@@ -1,1 +1,1 @@
-This folder contains the intellectual property of Jason Abi Chebli in completing the homework sheets and the assignment for FIT3179 - Data Visualisation. 
+This folder contains a study I did on Australian Earthquakes. See here for more: https://jabichebli.github.io/AustralianEarthquakes/Visualisation2/index.html 

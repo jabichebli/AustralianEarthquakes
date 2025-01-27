@@ -22,7 +22,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/data/earthquakes_data_cleaned.xlsx"
+          "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/TestingDataset/data/earthquakes_data_cleaned.csv"
         },
         "projection": {
           "type": "mercator"

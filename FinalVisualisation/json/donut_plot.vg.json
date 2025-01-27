@@ -3,6 +3,7 @@
   "background": "transparent",
   "title": {
     "text": "Total Number of Earthquakes per State*",
+    "color": "#000000",
     "fontSize": 16,
     "font": "Open Sans, sans-serif",
     "anchor": "middle"

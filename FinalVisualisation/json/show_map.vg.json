@@ -37,14 +37,14 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week9_homework/json/australia.json",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/json/australia.json",
         "format": {"type": "topojson", "feature": "australia"}
       },
       "mark": {"type": "geoshape", "fill": "#FFE4B5", "stroke": "white"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/week9_homework/data/earthquakes_data_cleaned.csv"
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/data/earthquakes_data_cleaned.csv"
       },
       "transform": [
         {
@@ -100,7 +100,7 @@
       },
       "mark": {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/australia_world_map.png",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/img/australia_world_map.png",
         "x": 830,
         "y": 255,
         "width": 175,
@@ -113,7 +113,7 @@
       },
       "mark": {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/curved_hover_over.png",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/img/curved_hover_over.png",
         "x": 650,
         "y": 150,
         "width": 90,

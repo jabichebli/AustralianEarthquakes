@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background": "transparent",
   "data": {
-    "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_data.csv",
+    "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/data/earthquakes_data_choropleth_data.csv",
     "format": {
       "type": "csv"
     }
@@ -272,7 +272,7 @@
               },
               "mark": {
                 "type": "image",
-                "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img//curved_hover_over.png",
+                "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/img/curved_hover_over.png",
                 "x": 170,
                 "y": 30,
                 "width": 90,

@@ -29,7 +29,7 @@
       "mark": {
         "type": "arc",
         "innerRadius": 50,
-        "stroke": "#97c9b6", 
+        "stroke": "#ffffff", 
         "strokeWidth": 2 
       },
       "encoding": {

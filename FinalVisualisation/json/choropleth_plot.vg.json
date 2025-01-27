@@ -24,7 +24,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/json/states_australia.topojson",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/json/states_australia.topojson",
         "format": {
           "type": "topojson",
           "feature": "states"
@@ -39,7 +39,7 @@
           "lookup": "properties.STATE_NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/refs/heads/main/week10_homework/data/earthquakes_data_choropleth_data.csv",
+              "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/data/earthquakes_data_choropleth_data.csv",
               "format": {
                 "type": "csv"
               }
@@ -88,7 +88,7 @@
       },
       "mark": {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/curved_hover_over.png",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/img/curved_hover_over.png",
         "x": 650,
         "y": 90,
         "width": 90,
@@ -101,7 +101,7 @@
       },
       "mark": {
         "type": "image",
-        "url": "https://raw.githubusercontent.com/jabichebli/FIT3179/main/Visualisation2/img/australia_world_map.png",
+        "url": "https://raw.githubusercontent.com/jabichebli/australianEarthquakesAnalysis/refs/heads/main/FinalVisualisation/img/australia_world_map.png",
         "x": 830,
         "y": 340,
         "width": 175,

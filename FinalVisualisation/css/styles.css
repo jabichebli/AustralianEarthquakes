@@ -4,7 +4,7 @@ body *{
 
 h1 {
     font-weight: 900;
-    color: #97c9b6;
+    color: #ffffff;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 .page {
     width: 1000px;
-    background-color: #97c9b6;
+    background-color: #ffffff;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -99,7 +99,7 @@ li{
 }
 .pure-table th {
   background-color: #5e3717; /* Header background */
-  color: #97c9b6; /* Header text color */
+  color: #ffffff; /* Header text color */
 }
 .pure-table tr {
   border-bottom: none; /* Bottom border for each row */
